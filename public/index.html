@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chat App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <p>new App</p>
+    <div class="row">
 
-    <div>
-        <ol id="messages"></ol>
+        <div class="chat-sidebar col-3">
+            <h2>People</h2>
+        </div>
+    
+        <div class="chat-main col-8">
+    
+            <div class="message pt-5 pb-5 mb-5 col">
+                <ol id="messages"></ol>
+            </div>
+    
+            <div class="chat-footer col-8">
+                <form id="messageForm" class="col-9">
+                    <input name="message" minlength="1" type="text" class="input col-8" autofocus autocomplete="off">
+                    <input id="submit" type="submit" value="Send" class="button col-2 ml-3">
+                </form>
+                <button id="location" class="b col-2">Send location</button>
+            </div>
+    
+        </div>
+
     </div>
 
-    <form id="messageForm">
-        <input name="message" type="text">
-        <button>Send</button>
-    </form>
-    <button id="location">Send location</button>
 
     <script src = "socket.io/socket.io.js"></script>
     <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="js/moment.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

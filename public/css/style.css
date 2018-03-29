@@ -1,0 +1,107 @@
+*{
+    box-sizing: content-box;
+}
+body{
+    margin: 0;
+    padding:0;
+    width: 100vw;
+}
+
+.chat{
+    position: relative;
+    margin: 0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+.chat-sidebar{
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(6, 55, 71);
+    margin: 0;
+    text-align: center;
+    color: white
+}
+
+ol{
+    list-style: none;
+    position: relative;
+    display: block;
+    overflow-wrap: break-word;
+    font-size: 1.5rem
+}
+
+.chat-main{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    right: 5%;
+    position: absolute;
+    border-left: 1px solid rgba(204, 204, 204, 0.575);
+    border-right: 1px solid rgba(204, 204, 204, 0.575);
+}
+
+.chat-footer{
+    position: fixed;
+    display: block;
+    height: 70px;
+    bottom: 1vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(204, 204, 204, 0.575);
+}
+
+form {
+    height: 50px;
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.chat-footer form .input{
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+.chat-footer form .button {
+    height: 100%;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-53%);
+    position: relative;
+    background-color: rgb(6, 55, 71, 0.822);
+    color: white;
+    border: 0px outset rgb(6, 55, 71, 0.822);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+}
+.chat-footer form .button:focus, .b:focus{
+    outline: 4px ridge rgb(76, 196, 236);
+    transition:.2s ;
+}
+
+.chat-footer .b {
+    height: 50px;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(6, 55, 71, 0.822);
+    color: white;
+    border: 0px solid white;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.chat-footer .b:disabled{
+    background-color: rgba(56, 56, 56, 0.63);
+    outline: 4px ridge rgb(76, 196, 236);
+    transition:.2s ;
+}
