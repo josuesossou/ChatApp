@@ -19,7 +19,6 @@ body{
     position: fixed;
     background-color: rgb(6, 55, 71);
     margin: 0;
-    text-align: center;
     color: white
 }
 
@@ -28,7 +27,22 @@ ol{
     position: relative;
     display: block;
     overflow-wrap: break-word;
-    font-size: 1.5rem
+}
+.tittle{
+    margin: 0;
+}
+.tittle h4{
+    margin-right: 10px;
+}
+.tittle p{
+    line-height: wrap;
+    margin-top: 3px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    opacity: .3;
+}
+.message{
+    margin-top: -15px;
 }
 
 .chat-main{
@@ -82,10 +96,6 @@ form {
     text-align: center;
     font-size: 1em;
 }
-.chat-footer form .button:focus, .b:focus{
-    outline: 4px ridge rgb(76, 196, 236);
-    transition:.2s ;
-}
 
 .chat-footer .b {
     height: 50px;
@@ -102,6 +112,5 @@ form {
 }
 .chat-footer .b:disabled{
     background-color: rgba(56, 56, 56, 0.63);
-    outline: 4px ridge rgb(76, 196, 236);
-    transition:.2s ;
+
 }

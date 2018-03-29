@@ -8,21 +8,26 @@ socket.on('connect', ()=>{
 
 socket.on('newMessage', (message)=>{
     let formattedDate = moment().format('H:mm a');
-    let li = $('<li></li>');
-    li.text(`from ${message.from} ${formattedDate}: ${message.text}`)
-    $('#messages').append(li);
+    let template = $('#message-template').html();
+    const html = Mustache.render(template, {
+        from:message.from,
+        text:message.text,
+        completedAt: formattedDate
+    })
+
+    $('#messages').append(html);
 });
 
 socket.on('locationMessage', function(location){
     let formattedDate = moment().format('H:mm a');
-    let li = $('<li></li>');
-    let a = $('<a target="_blank">User Location</a>');
+    let template = $('#location-template').html();
+    const html = Mustache.render(template, {
+        from:location.from,
+        url:location.url,
+        completedAt: formattedDate
+    })
 
-    li.text(`from ${location.from} ${formattedDate}: `);
-    a.attr('href',location.url);
-    li.append(a);
-
-    $('#messages').append(li);
+    $('#messages').append(html);
 })
 
 

@@ -11,13 +11,13 @@
 <body>
     <div class="row">
 
-        <div class="chat-sidebar col-3">
-            <h2>People</h2>
+        <div class="chat-sidebar col-3 pt-3">
+            <h2 class="ml-4">People</h2>
         </div>
     
         <div class="chat-main col-8">
     
-            <div class="message pt-5 pb-5 mb-5 col">
+            <div class="pt-5 pb-5 mb-5 col">
                 <ol id="messages"></ol>
             </div>
     
@@ -32,11 +32,37 @@
         </div>
 
     </div>
+    <script id="message-template" type="text/template">
+        <li>
+            <div class="tittle row">   
+                <h4>{{from}}</h4>
+                <p>{{completedAt}}<p>
+            </div>
 
+            <div class="message">
+                <!-- <a href="{{url}}" target="_blank">the Location</a> -->
+                <p>- {{text}}</p>
+            </div>
+        </li>
+    </script>
+
+    <script id="location-template" type="text/template">
+        <li>
+            <div class="tittle row">   
+                <h4>{{from}}</h4>
+                <p>{{completedAt}}<p>
+            </div>
+
+            <div class="message">
+                <p>- <a href="{{url}}" target="_blank">User Location</a></p>
+            </div>
+        </li>
+    </script>
 
     <script src = "socket.io/socket.io.js"></script>
-    <script src="libs/jquery-3.3.1.min.js"></script>
-    <script src="js/moment.js"></script>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/moment.js"></script>
+    <script src="js/libs/mustache.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
