@@ -9,26 +9,24 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <div class="row">
+    <div class="chat-layout">
 
-        <div class="chat-sidebar col-3 pt-3">
+        <div class="chat-sidebar d- col-3 pt-3">
             <h2 class="ml-4">People</h2>
         </div>
     
-        <div class="chat-main col-8">
-    
-            <div class="pt-5 pb-5 mb-5 col">
+        <div class="chat-main col-12 col-md-9">
+            <div class="container pt-5 pl-5">
                 <ol id="messages"></ol>
             </div>
-    
-            <div class="chat-footer col-8">
-                <form id="messageForm" class="col-9">
-                    <input name="message" minlength="1" type="text" class="input col-8" autofocus autocomplete="off">
-                    <input id="submit" type="submit" value="Send" class="button col-2 ml-3">
-                </form>
-                <button id="location" class="b col-2">Send location</button>
-            </div>
-    
+        </div>
+
+        <div class="chat-footer col-12 col-md-9">
+            <form id="messageForm" class="col-12 d-block col-md-9 d-md-inline-block">
+                <input name="message" minlength="1" type="text" class="input col-9" autofocus autocomplete="off">
+                <input id="submit" type="submit" value="Send" class="button col-2 ml-4">
+            </form>
+            <button id="location" class="b mt-2 ml-3 mb-0 col-12 d-block m-md-0 col-md-2 d-md-inline-block">Send location</button>
         </div>
 
     </div>

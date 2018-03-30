@@ -1,17 +1,15 @@
 *{
-    box-sizing: content-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+html{
+    height: 100%;
+    width: 100%;
 }
 body{
-    margin: 0;
-    padding:0;
-    width: 100vw;
-}
-
-.chat{
-    position: relative;
-    margin: 0;
-    padding:0;
-    overflow-x: hidden;
+    height: 100%;
+    width:100%;
 }
 
 .chat-sidebar{
@@ -46,32 +44,35 @@ ol{
 }
 
 .chat-main{
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    right: 5%;
+    min-height: 100%;
+    right: 0;
     position: absolute;
-    border-left: 1px solid rgba(204, 204, 204, 0.575);
-    border-right: 1px solid rgba(204, 204, 204, 0.575);
+    /* border-left: 1px solid rgba(204, 204, 204, 0.575);
+    border-right: 1px solid rgba(204, 204, 204, 0.575); */
+    background-color: rgba(255, 243, 221, 0.836)
+}
+.container{
+    min-height: 100vh;
+    background-color: white;
+    padding-bottom: 120px
 }
 
 .chat-footer{
     position: fixed;
     display: block;
-    height: 70px;
-    bottom: 1vh;
-    margin: 0;
-    padding: 0;
+    height: wrap;
+    width: wrap;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0;
     background-color: rgba(204, 204, 204, 0.575);
 }
 
 form {
     height: 50px;
     width: 80%;
-    display: inline-block;
+    display: block;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 0 10px;
 }
 
@@ -99,10 +100,8 @@ form {
 
 .chat-footer .b {
     height: 50px;
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    display: block;
     background-color: rgba(6, 55, 71, 0.822);
     color: white;
     border: 0px solid white;

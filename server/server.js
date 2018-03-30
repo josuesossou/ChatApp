@@ -22,7 +22,6 @@ io.on('connection', (socket)=>{
     socket.emit("newMessage", generateMessage("Admin","Welcome to chat room"));
 
     socket.on('createMessage', (message, callback)=>{
-        console.log('new message to send', message)
         io.emit('newMessage', generateMessage(message.from, message.text))
         callback();
     })
