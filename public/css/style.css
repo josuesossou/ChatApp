@@ -1,115 +1,34 @@
 *{
-    box-sizing: border-box;
     margin: 0;
-    padding:0;
+    padding: 0
 }
-html{
-    height: 100%;
-    width: 100%;
-}
+
 body{
-    height: 100%;
-    width:100%;
-}
-
-.chat-sidebar{
     height: 100vh;
-    position: fixed;
+    width:100vw;
     background-color: rgb(6, 55, 71);
-    margin: 0;
-    color: white
 }
-
-ol{
-    list-style: none;
-    position: relative;
-    display: block;
-    overflow-wrap: break-word;
-}
-.tittle{
-    margin: 0;
-}
-.tittle h4{
-    margin-right: 10px;
-}
-.tittle p{
-    line-height: wrap;
-    margin-top: 3px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    opacity: .3;
-}
-.message{
-    margin-top: -15px;
-}
-
-.chat-main{
-    min-height: 100%;
-    right: 0;
-    position: absolute;
-    /* border-left: 1px solid rgba(204, 204, 204, 0.575);
-    border-right: 1px solid rgba(204, 204, 204, 0.575); */
-    background-color: rgba(255, 243, 221, 0.836)
-}
-.container{
-    min-height: 100vh;
-    background-color: white;
-    padding-bottom: 120px
-}
-
-.chat-footer{
-    position: fixed;
-    display: block;
-    height: wrap;
-    width: wrap;
-    right: 0;
-    bottom: 0;
-    padding: 10px 0;
-    background-color: rgba(204, 204, 204, 0.575);
-}
-
-form {
-    height: 50px;
-    width: 80%;
-    display: block;
-    position: relative;
-    padding: 0 10px;
-}
-
-.chat-footer form .input{
-    height: 100%;
-    display: inline-block;
+.form-content{
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
-    padding: 0 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(226, 226, 226)
 }
-.chat-footer form .button {
-    height: 100%;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-53%);
-    position: relative;
-    background-color: rgb(6, 55, 71, 0.822);
-    color: white;
-    border: 0px outset rgb(6, 55, 71, 0.822);
+h2{
     font-weight: bold;
-    text-align: center;
-    font-size: 1em;
+    text-align: center
 }
-
-.chat-footer .b {
-    height: 50px;
-    position: relative;
-    display: block;
-    background-color: rgba(6, 55, 71, 0.822);
-    color: white;
-    border: 0px solid white;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
+.btn{
+    border-radius: 0 !important;
 }
-.chat-footer .b:disabled{
-    background-color: rgba(56, 56, 56, 0.63);
-
+.btn-primary{
+    background-color: rgb(6, 55, 71)!important;
+    border-color: rgb(6, 55, 71)!important
+}
+label{
+    font-size: 1.3rem
 }

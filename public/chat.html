@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat | Chat App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/chat.css"/>
+</head>
+<body>
+    <div class="chat-layout">
+
+        <div class="chat-sidebar d-none d-md-block col-3 pt-3">
+            <h2 class="ml-4">People</h2>
+        </div>
+    
+        <div class="chat-main col-12 col-md-9">
+            <div class="container cont pt-5 pl-5">
+                <ol id="messages"></ol>
+            </div>
+        </div>
+        
+        <div class="chat-footer col-12 col-md-9">
+            <div class="container contain">
+                <form id="messageForm" class="col-12 d-block col-md-9 d-md-inline-block">
+                    <input name="message" minlength="1" type="text" class="input col-8 mr-3 ml-2" autofocus autocomplete="off">
+                    <input id="submit" type="submit" value="Send" class="button col-3 ml-2">
+                </form>
+                <button id="location" class="b mt-2 ml-3 mb-0 col-12 mx-auto d-block m-md-0 col-md-2 d-md-inline-block">Send location</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script id="message-template" type="text/template">
+        <li>
+            <div class="tittle row">   
+                <h4>{{from}}</h4>
+                <p>{{completedAt}}<p>
+            </div>
+
+            <div class="message">
+                <!-- <a href="{{url}}" target="_blank">the Location</a> -->
+                <p>- {{text}}</p>
+            </div>
+        </li>
+    </script>
+
+    <script id="location-template" type="text/template">
+        <li>
+            <div class="tittle row">   
+                <h4>{{from}}</h4>
+                <p>{{completedAt}}<p>
+            </div>
+
+            <div class="message">
+                <p>- <a href="{{url}}" target="_blank">User Location</a></p>
+            </div>
+        </li>
+    </script>
+
+    <script src = "socket.io/socket.io.js"></script>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/moment.js"></script>
+    <script src="js/libs/mustache.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
