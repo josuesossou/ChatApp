@@ -19,8 +19,21 @@ body{
     margin: 0;
     color: white
 }
+#users ol{
+    margin-top: 2rem;
+}
+#users ol li{
+    border-radius: 8px;
+    padding: .9rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: black;
+    margin: 1.4rem 0;
+    background-color: rgb(226, 226, 226);
+}
 
-ol{
+ ol{
     list-style: none;
     position: relative;
     display: block;
@@ -41,6 +54,10 @@ ol{
 }
 .message{
     margin-top: -15px;
+}
+.message p{
+    font-size: 1.2rem;
+    font-weight: 450
 }
 
 .chat-main{

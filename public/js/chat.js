@@ -25,10 +25,20 @@ socket.on('connect', ()=>{
             alert(err);
             window.location.href = "/"
         }else{
-            console.log("No erro")
+            console.log("No error")
         }
     })
 });
+
+socket.on('updateUserList', (users)=>{
+    let ol = $('<ol></ol>');
+
+    users.forEach(function(user){
+        ol.append($('<li></li>').text(user))
+    });
+
+    $('#users').html(ol);
+})
 
 socket.on('newMessage', (message)=>{
     let formattedDate = moment().format('H:mm a');
